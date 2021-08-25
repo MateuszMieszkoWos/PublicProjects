@@ -1,0 +1,9 @@
+mvcJourneyPlanner2controller(using approach shown in Figure2above)o
+
+The  controller  is  completely  separated  from  the  view  and  has  been  placed  inside  a dedicated class called JourneyController.
+
+The ButtonPaneand JourneyMenuBar classes no longer contain any event handling logic and instead simply provide methods to add handlers to the buttons, combobox, and  menu  items.  
+
+These  two  classes  also  no  longer  require  a  reference  to  any  other part of the view, and as such are more tightly encapsulated.oThe  view  is  completely  decoupled  from  the  model  (as  seen  in  ApplicationLoader) and instead the separate controller contains a reference to both the model and view. 
+
+This reduces coupling and increases cohesion throughout the application.oThe view (specifically JourneyPlannerRootPane) provides additional public methods so  the  controller  can  gain  access  to  various panes in  order  to  refresh controls'  state and attach event handlers.
